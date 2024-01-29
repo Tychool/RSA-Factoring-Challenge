@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Check if the correct number of arguments is provided
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <file>"
+    exit 1
+fi
+
+file="$1"
+
+# Check if the file exists
+if [ ! -f "$file" ]; then
+    echo "File not found: $file"
+    exit 1
+fi
+
+# Loop through each line in the file
+while IFS= read -r line; do
+    # Factorize the number
+    for ((i=2; i<=$line/2; i++)); do
+        if [ $((line%i)) -eq 0 ]; then
+            ft1=$i
+            ft2=$((line/i))
+            echo "$line=$ft2*$ft1"
+            break
+        fi
+    done
+done < "$file"
+
