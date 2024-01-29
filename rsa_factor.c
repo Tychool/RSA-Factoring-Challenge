@@ -11,7 +11,7 @@ void factor_rsa(int n)
     int q = n / p;
 
     // Find two prime numbers 'p' and 'q' such that 'p * q = n'
-    while (!is_prime(p) || !is_prime(q))
+    while (!_isPrime(p) || !_isPrime(q))
     {
         ++p;
         q = n / p;
