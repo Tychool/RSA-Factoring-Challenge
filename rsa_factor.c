@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * factor_rsa - factorize a prime
  * ---------------------
@@ -17,6 +18,6 @@ void factor_rsa(int n)
         q = n / p;
     }
 
-    printf("%d = %d * %d", n, p, q);
+    printf("%d=%d*%d", n, p, q);
 }
 

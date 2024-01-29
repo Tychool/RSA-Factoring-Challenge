@@ -20,7 +20,7 @@ void factorize(unsigned long n)
         // If n is divisible evenly by divisor, print the factorization and return
         if (n % divisor == 0)
         {
-            printf("%lu = %lu * %lu\n", n, factor, divisor);
+            printf("%lu=%lu*%lu\n", n, factor, divisor);
             found = 1;
             return;
         }
@@ -35,7 +35,7 @@ void factorize(unsigned long n)
     // If no factor is found, print n as the product of itself and 1
     if (!found)
     {
-        printf("%lu = %lu * 1\n", n, n);
+        printf("%lu=%lu*1\n", n, n);
 	printf("no factor found\n");
     }
 }
