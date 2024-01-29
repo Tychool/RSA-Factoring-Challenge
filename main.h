@@ -6,5 +6,6 @@
 #include <math.h>
 
 void factorize(unsigned long n);
-
+void factor_rsa(int n);
+int _isPrime(int n);
 #endif
