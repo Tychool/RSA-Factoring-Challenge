@@ -36,6 +36,5 @@ void factorize(unsigned long n)
     if (!found)
     {
         printf("%lu=%lu*1\n", n, n);
-	printf("no factor found\n");
     }
 }
